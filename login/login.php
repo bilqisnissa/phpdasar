@@ -1,5 +1,5 @@
 <?php
-//cek apakah tombol submit sudah di klik atau blm
+//cek apakah tombol submit sudah di klik atau belum
 if(isset($_POST["submit"])){
     //cek username dan pass
     if($_POST["username"] == "admin" && $_POST["password"] == "123456"){
