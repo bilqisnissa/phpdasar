@@ -1,6 +1,7 @@
 <?php
-$db = mysqli_connect("localhost", "root", "", "db_phpdasar");
-$result = mysqli_query($db, "SELECT * FROM tb_book");
+require'functions.php';
+
+$result = query("SELECT * FROM tb_book");
 
 ?>
 
@@ -17,6 +18,10 @@ $result = mysqli_query($db, "SELECT * FROM tb_book");
 
 <body>
     <h1>Daftar Buku</h1>
+
+    <a href="tambah.php">tambah data buku</a>
+    <p>
+
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
@@ -27,18 +32,28 @@ $result = mysqli_query($db, "SELECT * FROM tb_book");
         </tr>
 
     <?php $i = 1;?>
-    <?php while($row = mysqli_fetch_assoc($result)):?>
+    <?php foreach($result as $row):?>
+
+
         <tr>
+
             <td><?= $i; ?></td>
+
+            <td>
+            <a href="">ubah | </a>
+            <a href="">hapus</a>
+            </td>
+
             <td><img src="img/<?= $row["gambar_buku"]; ?>" width="100" height="100"></td>
             <td><?= $row["nama_buku"]?></td>
             <td><?= $row["harga_buku"]?></td>
             <td><?= $row["tahun_terbit"]?></td>
+
         </tr>
         
         <?php $i++?>
 
-        <?php endwhile;?>
+        <?php endforeach;?>
     </table>
 </body>
 
