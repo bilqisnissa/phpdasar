@@ -25,6 +25,7 @@ $result = query("SELECT * FROM tb_book");
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
+            <th>aksi</th>
             <th>Gambar</th>
             <th>Judul Buku</th>
             <th>Harga</th>
