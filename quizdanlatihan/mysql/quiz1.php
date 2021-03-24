@@ -1,7 +1,7 @@
 <?php
 require'functions.php';
 
-$result = query("SELECT * FROM tb_book");
+$result = get("SELECT * FROM tb_book");
 
 ?>
 
@@ -41,11 +41,11 @@ $result = query("SELECT * FROM tb_book");
             <td><?= $i; ?></td>
 
             <td>
-            <a href="">ubah | </a>
-            <a href="">hapus</a>
+            <a href="ubah.php?id=<?= $row["id_buku"];?>">ubah | </a>
+            <a href="hapus.php?id=<?= $row["id_buku"];?>">hapus</a>
             </td>
 
-            <td><img src="img/<?= $row["gambar_buku"]; ?>" width="100" height="100"></td>
+            <td><img src="img/<?= $row["gambar_buku"]; ?>" width="100" height="120"></td>
             <td><?= $row["nama_buku"]?></td>
             <td><?= $row["harga_buku"]?></td>
             <td><?= $row["tahun_terbit"]?></td>

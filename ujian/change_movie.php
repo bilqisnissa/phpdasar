@@ -21,8 +21,8 @@ if(isset($_POST["submit"])){
         </script>
        ";
    }
-   $db = mysqli_connect("localhost", "root", "", "db_phpdasar");
-   echo mysqli_error($db);
+//    $db = mysqli_connect("localhost", "root", "", "db_phpdasar");
+//    echo mysqli_error($db);
 }
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ if(isset($_POST["submit"])){
 <body>
     <h1> Change Movie Data</h1>
     <form action="" method="post">
-        <input type="hidden" name="id_film" value="<?= $movie["id_film"]?>"></input>
+        <input type="hidden" name="id_film" value="<?= $movie["id_film"];?>"></input>
         <label for="poster_film">Poster : </label>
         <input type="text" name="poster_film" id="poster_film" required value="<?= $movie["poster_film"];?>"></input>
         <p>

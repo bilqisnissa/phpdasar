@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-    <h1> Tambah Data Siswa</h1>
+    <h1> Ubah Data Siswa</h1>
 
     <form action="" method="post">
 

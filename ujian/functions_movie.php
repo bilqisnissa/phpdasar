@@ -47,7 +47,7 @@ function change($data){
     $terbit = $data["tahun_terbit"];
     $rate = $data["rate_film"];
 
-    $query = "UPDATE tb_siswa SET 
+    $query = "UPDATE tb_movie SET 
     judul_film = '$judul',
     poster_filn = '$poster',
     tahun_terbit = '$terbit',
