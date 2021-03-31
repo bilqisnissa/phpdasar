@@ -7,7 +7,7 @@ if (isset($_POST["submit"])) {
         echo "
             <script>
             alert('data berhasil ditambahkan!');
-            document.location.href = 'index.php'
+            document.location.href = 'index_movie.php'
             </script>
         ";
     } else {

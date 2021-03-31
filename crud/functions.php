@@ -58,4 +58,19 @@ function ubah($data){
     mysqli_query($db, $query);
 
     return mysqli_affected_rows($db);
+
 }
+
+function cari($keyword)
+{
+    $query = "SELECT * FROM tb_siswa WHERE 
+    nama_siswa LIKE '%$keyword%' OR
+    email_siswa LIKE '%$keyword%' OR 
+    kelas_siswa LIKE '%$keyword%'
+    ";
+    
+return get($query);
+}
+
+
+?>

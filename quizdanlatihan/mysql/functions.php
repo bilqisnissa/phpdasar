@@ -59,3 +59,17 @@ function ubah($data){
 
     return mysqli_affected_rows($db);
 }
+
+function cari($keyword)
+{
+    $query = "SELECT * FROM tb_book WHERE 
+    nama_buku LIKE '%$keyword%' OR
+    harga_buku LIKE '%$keyword%' OR 
+    tahun_terbit LIKE '%$keyword%'
+    ";
+    
+return get($query);
+}
+
+
+?>
